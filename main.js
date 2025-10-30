@@ -10,6 +10,10 @@ let btn = document.getElementById("btn");
 let cart = document.getElementById("cart");
 let cart_span = document.createElement("span");
 let cart_div = document.querySelector(".cart_div");
+let productName = document.querySelector(".product_name").textContent;
+let productPrice = document.querySelector(".price").textContent;
+let productImage = document.querySelector("#main_image").src;
+
 let y = 0;
 cart_span.id="cart_span";
 cart_span.style.cssText = " position: absolute;top: 51px;right: 47px;background-color: rgb(223, 7, 7);padding: 4px;border-radius: 70%;font-size: 6px;";
@@ -19,11 +23,11 @@ btn.onclick = function () {
         cart_div.appendChild(cart_span);
     }
     let product = {
-    name: "mid-century Modern home chair",
+    name: productName,
     category: "furniture",
-    price: 250.5,
-    count: 1,
-    image: "/images/mid-century_Modern_home_chair-removebg-preview.png"
+    price: productPrice,
+    count: number,
+    image: productImage
     };
     let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
     cartItems.push(product);
