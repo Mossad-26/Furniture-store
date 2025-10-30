@@ -10,9 +10,24 @@ body{
     background-color: #db8d20;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 15px;
+}
+#cart{
+    position: relative;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
 .container{
     width: 80%;
     height: 80%;
